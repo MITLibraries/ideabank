@@ -1,0 +1,16 @@
+/* background image body classes, added to each page's body tag  */
+.backgroundimage1 {
+	background-image: url(../images/background-image-A.jpg); 
+}
+.backgroundimage2 {
+	background-image: url(../images/background-image-B.jpg); 
+}
+.backgroundimage3 {
+	background-image: url(../images/background-image-C.jpg); 
+}
+.backgroundimage4 {
+	background-image: url(../images/background-image-D.jpg); 
+}
+.backgroundimage5 {
+	background-image: url(../images/background-image-E.jpg); 
+}

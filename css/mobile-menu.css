@@ -1,0 +1,13 @@
+.accordion {
+	
+	}
+.accordion, .accordion li {margin: 0; padding: 0; border: none; list-style: none;}
+.accordion a {padding: 10px 10px 10px 50px; text-decoration:none; display: block; position: relative; font-weight: normal;}
+.accordion ul a {}
+.accordion a.dcjq-parent {}
+.accordion a.dcjq-parent:hover {}
+.accordion a.dcjq-parent.active {}
+.accordion a .dcjq-icon {position: absolute; top: 50%; left: 14px; width: 34px; margin-top: -17px; height: 34px; background: url(../images/arrow_black_right.png) no-repeat 0 center;}
+.accordion a.dcjq-parent.active .dcjq-icon {background: url(../images/arrow_black_down.png) no-repeat 0 center;}
+.accordion a:hover {}
+.accordion a:active{}

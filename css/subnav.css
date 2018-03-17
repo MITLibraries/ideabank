@@ -1,0 +1,117 @@
+#leftsidesubnav {
+	display: block;
+	float: left;
+	font-size: .9em;
+	width: 16%;
+	height: auto;
+	margin-top: -8px;
+	margin-left: -18px;
+	margin-right: 24px;
+	margin-bottom: 4%;
+	}
+
+
+
+#subnav, #subnav ul{
+display: block;
+margin:0;
+padding-left:0px;
+list-style-type:none;
+list-style-position:outside;
+position:relative; 
+}
+	
+
+#subnav a{
+display:block;
+padding: 6px 4px 8px 0px;
+text-decoration:none;
+color:#8A8B8C;
+font-weight:bold;
+}
+
+#subnav a:after {
+  content: '\25B8';
+  position: relative;
+  left: 4px;
+  margin-top: -2px;
+  margin-right: 2px;
+font-size: .8em;
+}
+
+#subnav a:hover {
+
+text-decoration:underline;
+color:#A31F34;
+}
+
+#subnav a:active {
+background-color:#CCC;
+text-decoration:underline;
+color:#993333;
+}
+
+#subnav a:visisted {
+color:#000;
+}
+
+#subnav li{
+float:left;
+position:relative;
+}
+
+#subnav ul {
+position:relative;
+margin-left:0px;
+z-index: 50;
+display:none;
+width:auto;
+background-color:#1b67ba;
+-moz-box-shadow: 3px 4px 6px #666;
+  -webkit-box-shadow: 3px 4px 6px #666;
+	box-shadow: 3px 4px 6px #666;
+}
+
+
+
+#subnav li ul a{
+width:184px;
+padding-top:8px;
+padding-bottom:7px;
+float:left;
+}
+
+#subnav ul ul{
+top:auto;
+}	
+
+#subnav li ul ul {
+left:160px;
+}
+
+#subnav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
+display:none;
+}
+#subnav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
+display:block;
+}
+
+.subnavbutton1-1 #subnavbutton1-1 a,
+.subnavbutton1-2 #subnavbutton1-2 a,
+.subnavbutton1-3 #subnavbutton1-3 a,
+.subnavbutton1-4 #subnavbutton1-4 a,
+.subnavbutton2-1 #subnavbutton2-1 a,
+.subnavbutton3-1 #subnavbutton3-1 a,
+.subnavbutton4-1 #subnavbutton4-1 a,
+.subnavbutton5-1 #subnavbutton5-1 a {
+	color: #A31F34;
+	
+}
+
+@media screen and (max-width: 840px) {
+	
+#leftsidesubnav {
+	display: none;
+}
+
+}

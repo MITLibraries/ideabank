@@ -1,0 +1,67 @@
+name = MIT
+description = MIT
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/nav.css
+stylesheets[all][] = css/subnav.css
+stylesheets[all][] = css/mobile-menu.css
+stylesheets[all][] = css/jquery.bxslider.css
+stylesheets[all][] = css/supersized.css
+stylesheets[all][] = css/future-of-libraries-theme.css
+
+regions[header] = Header
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[footer] = Footer
+
+;javascript
+scripts[] = js/menu.js
+scripts[] = js/jquery.bxslider.js
+scripts[] = js/jquery.easing.1.3.js
+scripts[] = js/supersized.3.2.7.min.js
+scripts[] = js/jquery.dcjqaccordion.2.7.min.js
+
+;css
+;exclude[css][] = 'misc/vertical-tabs.css'
+exclude[css][] = 'modules/aggregator/aggregator.css'
+exclude[css][] = 'modules/block/block.css'
+exclude[css][] = 'modules/book/book.css'
+exclude[css][] = 'modules/comment/comment.css'
+exclude[css][] = 'modules/dblog/dblog.css'
+exclude[css][] = 'modules/field/theme/field.css'
+exclude[css][] = 'modules/file/file.css'
+exclude[css][] = 'modules/filter/filter.css'
+exclude[css][] = 'modules/forum/forum.css'
+exclude[css][] = 'modules/help/help.css'
+exclude[css][] = 'modules/menu/menu.css'
+exclude[css][] = 'modules/node/node.css'
+exclude[css][] = 'modules/openid/openid.css'
+exclude[css][] = 'modules/poll/poll.css'
+exclude[css][] = 'modules/search/search.css'
+exclude[css][] = 'modules/statistics/statistics.css'
+exclude[css][] = 'modules/syslog/syslog.css'
+exclude[css][] = 'modules/system/admin.css'
+exclude[css][] = 'modules/system/maintenance.css'
+exclude[css][] = 'modules/system/system.css'
+exclude[css][] = 'modules/system/system.admin.css'
+exclude[css][] = 'modules/system/system.base.css'
+exclude[css][] = 'modules/system/system.maintenance.css'
+exclude[css][] = 'modules/system/system.menus.css'
+exclude[css][] = 'modules/system/system.messages.css'
+exclude[css][] = 'modules/system/system.theme.css'
+exclude[css][] = 'modules/taxonomy/taxonomy.css'
+exclude[css][] = 'modules/tracker/tracker.css'
+exclude[css][] = 'modules/update/update.css'
+exclude[css][] = 'modules/user/user.css'
+
+;contri modules css
+exclude[css][] = 'sites/all/modules/contri/ckeditor/css/ckeditor.css'
+exclude[css][] = 'sites/all/modules/contri/ctools/css/ctools.css'
+exclude[css][] = 'sites/all/modules/contri/date/date_api/date.css'
+exclude[css][] = 'sites/all/modules/contri/date/date_popup/themes/datepicker.1.7.css'
+exclude[css][] = 'sites/all/modules/contri/field_collection/field_collection.theme.css'
+exclude[css][] = 'sites/all/modules/custom/shib_auth/shib_auth.css'
+exclude[css][] = 'sites/all/modules/contri/views/css/views.css'
