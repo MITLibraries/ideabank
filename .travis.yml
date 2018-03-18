@@ -1,0 +1,98 @@
+# Travis CI (MIT License) configuration file for the Ideabank Drupal theme.
+# This has been adapted from Wordpress' Underscores theme.
+# @link https://travis-ci.org/
+
+# For use with the Ideabank Drupal theme
+# @link https://github.com/MITLibraries/ideabank
+
+# Declare what Travis environment should be used. Specifically, we need the
+# 'precise' environment rather than 'trusty' to get PHP 5.3.
+dist: precise
+
+# Declare project language.
+# @link http://about.travis-ci.org/docs/user/languages/php/
+language: php
+
+# Declare versions of PHP to use. Use one decimal max.
+php:
+  # aliased to a recent 7.1.x version
+  - "7.1"
+  # aliased to a recent 5.6.x version
+  - "5.6"
+  # aliased to a recent 5.3.x version
+  - "5.3"
+
+# Declare which versions of Drupal to test against.
+env:
+  # 7.x Trunk
+  # @link https://github.com/drupal/drupal
+  - DRUPAL=7.x
+  # 8.6.x Trunk
+  # @link https://github.com/drupal/drupal/tree/8.6.x
+  - DRUPAL=8.6.x
+
+# Declare "future" releases to be acceptable failures.
+# @link http://docs.travis-ci.com/user/build-configuration/
+matrix:
+  allow_failures:
+    - php: "7.1"
+    - php: "5.6"
+    - env: DRUPAL=8.6.x
+  fast_finish: true
+
+# Use this to prepare the system to install prerequisites or dependencies.
+# e.g. sudo apt-get update.
+# Failures in this section will result in build status 'errored'.
+# before_install:
+
+# Use this to prepare your build for testing.
+# e.g. copy database configurations, environment variables, etc.
+# Failures in this section will result in build status 'errored'.
+before_script:
+  # Set up Drupal installation.
+  - export DRUPAL_DIR=/tmp/drupal/
+  - mkdir -p $DRUPAL_DIR
+  # Set up theme information.
+  - theme_slug=$(basename $(pwd))
+  - theme_dir=$DRUPAL_DIR/$theme_slug
+  - cd ..
+  - mv $theme_slug $theme_dir
+  # Set up Drupal configuration.
+  - cd $DRUPAL_DIR
+  - echo $DRUPAL_DIR
+  # Install Drupal coding standards
+  - composer global require drupal/coder
+  # Install CodeSniffer for Drupal Coding Standards checks.
+  - git clone https://github.com/squizlabs/PHP_CodeSniffer.git php-codesniffer
+  - cd php-codesniffer
+  - git checkout tags/2.9.1
+  # Set install path for Drupal Coding Standards.
+  - scripts/phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
+  # Hop into themes directory.
+  - cd $theme_dir
+  # After CodeSniffer install you should refresh your path.
+  - phpenv rehash
+
+# Run test script commands.
+# Default is specific to project language.
+# All commands must exit with code 0 on success. Anything else is considered failure.
+script:
+  # Search for PHP syntax errors.
+  - find . \( -name '*.php' \) -exec php -lf {} \;
+  # Drupal Coding Standards
+  # @link https://git.drupal.org/project/coder.git
+  # @link http://pear.php.net/package/PHP_CodeSniffer/
+  # -p flag: Show progress of the run.
+  # -s flag: Show sniff codes in all reports.
+  # -v flag: Print verbose output.
+  # -n flag: Do not print warnings. (shortcut for --warning-severity=0)
+  # --standard: Use Drupal as the standard.
+  # --extensions: Only sniff PHP files.
+  # --report=source: Return summary table
+  # --report=full: Returns verbose list of problems by test and line
+  - $DRUPAL_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php --report=source --report=full
+
+# Receive notifications for build results.
+# @link http://docs.travis-ci.com/user/notifications/#Email-notifications
+notifications:
+  email: false
