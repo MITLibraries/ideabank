@@ -11,7 +11,7 @@
 
         echo $img_output;
     } else {
-        echo '<img src="/sites/default/themes/mit/images/head-shot.png" class="head-shot">';
+        echo '<img src="/sites/default/themes/ideabank/images/head-shot.png" alt="Placeholder head shot" class="head-shot">';
     }
 
     if (!empty($content['field_display_name'][0]) && !empty($content['field_url'][0])) {

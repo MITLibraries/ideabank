@@ -1,5 +1,5 @@
-name = MIT
-description = MIT
+name = IdeaBank
+description = IdeaBank is a Drupal 7 theme by MIT and the MIT Libraries
 package = Core
 version = VERSION
 core = 7.x
@@ -10,7 +10,7 @@ stylesheets[all][] = css/subnav.css
 stylesheets[all][] = css/mobile-menu.css
 stylesheets[all][] = css/jquery.bxslider.css
 stylesheets[all][] = css/supersized.css
-stylesheets[all][] = css/future-of-libraries-theme.css
+stylesheets[all][] = css/ideabank-theme.css
 
 regions[header] = Header
 regions[content] = Content

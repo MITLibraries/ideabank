@@ -3,14 +3,14 @@
 //
 // Implements hook_css_alter().
 //
-function mit_css_alter(&$css) {
+function ideabank_css_alter(&$css) {
 
     if (!user_is_logged_in()) {
-        $theme_path = drupal_get_path('theme', 'mit');
+        $theme_path = drupal_get_path('theme', 'ideabank');
 
         // Load excluded CSS files from theme.
-        $excludes = _mit_alter_files_list_by_type(
-                        _mit_theme_get_info('exclude'),
+        $excludes = _ideabank_alter_files_list_by_type(
+                        _ideabank_theme_get_info('exclude'),
                         'css');
 
         $css = array_diff_key($css, $excludes);
@@ -21,7 +21,7 @@ function mit_css_alter(&$css) {
 //
 // Filter the files list by type
 //
-function _mit_alter_files_list_by_type($files, $type) {
+function _ideabank_alter_files_list_by_type($files, $type) {
     $output = array();
 
     foreach($files as $key => $value) {
@@ -37,7 +37,7 @@ function _mit_alter_files_list_by_type($files, $type) {
 //
 // Get setting under [info] in the theme info
 //
-function _mit_theme_get_info($setting_name, $theme = NULL) {
+function _ideabank_theme_get_info($setting_name, $theme = NULL) {
 
     // If no key is given, use the current theme if we can determine it.
     if (!isset($theme)) {
@@ -72,7 +72,7 @@ function _mit_theme_get_info($setting_name, $theme = NULL) {
 //
 // Implements hook_html_head_alter().
 //
-function mit_html_head_alter(&$head_elements) {
+function ideabank_html_head_alter(&$head_elements) {
 
     // remove meta tags
     unset($head_elements['system_meta_generator']);
@@ -89,6 +89,6 @@ function mit_html_head_alter(&$head_elements) {
 }
 
 
-function mit_form_comment_form_alter(&$form, &$form_state) {
+function ideabank_form_comment_form_alter(&$form, &$form_state) {
     $form['author']['#access'] = FALSE;
 }
