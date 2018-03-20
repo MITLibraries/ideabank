@@ -1,0 +1,40 @@
+---
+engines:
+  csslint:
+    enabled: true
+    checks:
+      import:
+        enabled: false
+      important:
+        enabled: false
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+      - php
+  eslint:
+    enabled: true
+    checks:
+      global-require:
+        enabled: false
+  fixme:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+    config:
+      standard: "Drupal"
+  phpmd:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+exclude_paths:
+  - bootstrap/**/*
+  - css/**/*
+  - libs/**/*

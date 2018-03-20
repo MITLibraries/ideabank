@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset name="Drupal Theme Coding Standards">
+	<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+
+	<!-- Set a description for this ruleset. -->
+	<description>A custom set of code standard rules to check for Drupal themes.</description>
+
+	<!-- Probably need to exclude the libs directory (externally-written code) -->
+	<exclude-pattern>/css/*</exclude-pattern>
+	<exclude-pattern>/libs/*</exclude-pattern>
+
+	<!-- Include the Drupal ruleset, with exclusions. -->
+	<rule ref="Drupal">
+		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
+		<!-- Temporariliy whitelisted checks until we start a round of code cleanup -->
+		<exclude name="Drupal.Array.Array.ArrayIndentation" />
+		<exclude name="Drupal.Array.Array.ArrayClosingIndentation" />
+		<exclude name="Drupal.Commenting.FileComment.Missing" />
+		<exclude name="Drupal.Commenting.FileComment.WrongStyle" />
+		<exclude name="Drupal.Commenting.FunctionComment.Missing" />
+		<exclude name="Drupal.Commenting.FunctionComment.WrongStyle" />
+		<exclude name="Drupal.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Drupal.Commenting.InlineComment.NoSpaceBefore" />
+		<exclude name="Drupal.Commenting.InlineComment.NotCapital" />
+		<exclude name="Drupal.Commenting.PostStatementComment.Found" />
+		<exclude name="Drupal.ControlStructures.ControlSignature.NewlineAfterCloseBrace" />
+		<exclude name="Drupal.ControlStructures.ControlSignature.SpaceAfterKeyword" />
+		<exclude name="Drupal.ControlStructures.ElseIf" />
+		<exclude name="Drupal.ControlStructures.InlineControlStructure.NotAllowed" />
+		<exclude name="Drupal.WhiteSpace.Comma.NoSpace" />
+		<exclude name="Drupal.WhiteSpace.OperatorSpacing.NoSpaceAfter" />
+		<exclude name="Drupal.WhiteSpace.OperatorSpacing.NoSpaceBefore" />
+		<exclude name="Drupal.WhiteSpace.ScopeIndent.IncorrectExact" />
+		<exclude name="Squiz.Arrays.ArrayDeclaration.NoSpaceBeforeDoubleArrow" />
+		<exclude name="Squiz.Arrays.ArrayDeclaration.NoSpaceAfterDoubleArrow" />
+	</rule>
+</ruleset>
