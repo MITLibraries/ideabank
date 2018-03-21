@@ -13,6 +13,14 @@ body {
 
 .backgroundimage1 {
 	background-image: url(../images/background-image-A.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.backgroundimage2 {
+    background-image: url(../images/background-image-B.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #container {

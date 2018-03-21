@@ -18,7 +18,7 @@
         <?php print $styles; ?>
         <?php print $scripts; ?>
     </head>
-    <body class="backgroundimage1 <?php print $classes; ?>" <?php print $attributes;?>>
+    <body class="backgroundimage<?php print theme_get_setting('background_image'); ?> <?php print $classes; ?>" <?php print $attributes;?>>
 
         <?php print $page_top; ?>
         <?php print $page; ?>

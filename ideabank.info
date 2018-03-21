@@ -4,6 +4,9 @@ package = Core
 version = VERSION
 core = 7.x
 
+;theme settings
+settings[background_image] = 1
+
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/nav.css
 stylesheets[all][] = css/subnav.css
