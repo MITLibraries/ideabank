@@ -84,12 +84,12 @@
 <div id="header" class="clearfix"><!-- holds header elements: title, MIT logo, searchbox  -->
 
 <div id="logo-bar">
-
-<a href="http://libraries.mit.edu/"><div id="libraries-logo" /></div></a>
-
-<div id="logo-holder">
-<a href="http://web.mit.edu"><div id="MIT-logo"></div></a>
-</div>
+    <?php if (theme_get_setting('libraries_logo')): ?>
+        <a href="http://libraries.mit.edu/"><div id="libraries-logo" /></div></a>
+    <?php endif; ?>
+    <div id="logo-holder">
+        <a href="http://web.mit.edu"><div id="MIT-logo"></div></a>
+    </div>
 </div>
 
 <div id="title">
