@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <?php if (drupal_is_front_page()): ?>
-        <title>The Future of Libraries | Massachusetts Institute of Technology</title>
+        <title><?php print variable_get('site_name', '');; ?> | Massachusetts Institute of Technology</title>
         <?php else : ?>
         <title><?php print htmlspecialchars_decode($head_title, ENT_QUOTES); ?></title>
         <?php endif; ?>

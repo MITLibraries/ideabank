@@ -229,7 +229,7 @@
 
 <a href="http://web.mit.edu"><div id="footerlogo"></div></a>
 
-<div class="footertext">Future of Libraries<br />
+<div class="footertext"><?php print $site_name; ?><br />
 Massachusetts Institute of Technology<br />
 Cambridge MA 02139-4307
 </div>
