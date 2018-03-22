@@ -1,782 +1,748 @@
- 	/* This stabilizes the html so pages don't jump around when navigating through the site   */
-html {
-        min-height: 100%;
-        margin-bottom: 1px;
-} 
-
-body {
-   	margin-top: 0px;
-	margin-right: 2%;
-	margin-left: 2%;  
-	overflow-y: auto;				
-}
-
-#container { /* The container is the live area that holds all the pages elements */
-        z-index: 2;
-		margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-        max-width: 1060px;
-		min-width: 280px;
-        padding: 2%;
-		padding-bottom: 1%;
-		padding-top: 0;
-		padding-left: 3%;
-     	overflow:hidden;
-		border: 2px solid #9f9b96;
-
-    }
-
-#logo-bar {
-		width: 103%;
-	float: left;
-	height: auto;
-	background:#333333;
-	padding: 2%;
-	padding-right: 4%;
-	margin-left: -5.4%;
-	padding-top: 2%;
-	padding-bottom:0;
-	margin-bottom: 1.6%;
-	
-	}
-
-#libraries-logo {
-	float: left;
-	width: 120px;
-	height: 50px;
-	background-image: url(../images/libraries_logo.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	background-size: 80% 80%;
-	margin-left: 4%;
-	margin-bottom:1%;
-	margin-top: -1%;
-	}
-
-#header { /* holds all the header elements: */
-	width: 100%;
-	float: left;
-	height: auto;
-	padding: 0px;
-	margin: 0px;
-	background-color:#538ac5;
-	padding: 6%;
-	padding-top:0;
-	margin-top: 0;
-	margin-left: -6%;
-	margin-bottom: -6%;
-	padding-bottom: 5%
-
-	}
-
-/* header group at upper left */
-
-#title { /* holds the org name and subtitle */
-	float: left;
-	width: auto;
-	height: auto;
-	margin-right: 4%;
-	}
-	
-#org-name a {
-	display: block;
-	width: auto;
-	height: auto;
-	float: left;
-	margin-top: 0px;
-	margin-bottom: 0;
-
-	}
-
-#org-name a:hover {
-	text-decoration: none;
-	}	
-
-#subtitle {
-	float: left;
-	width: auto;
-	}
-
-#searchbox {
-	float: right;
-	width: auto;
-	height: auto;
-	z-index: 16;
-	padding: 0px;
-	margin-top: 6px;
-	margin-right: 2%;
-}
-
-/* MIT master logo at upper right */
-#logo-holder {
-	float: right;
-	width: 56px;
-	height: 30px;
-	margin-top: 0;
-	margin-left: 6%;
-	margin-right:1%;
-	}
-
-#MIT-logo {
-	width: 56px;
-	height: 30px;
-	float: left;
-	background-image: url(../images/MIT-logo-sprite-54x28.gif);
-	background-repeat: no-repeat;
-	background-position: -224px 0px;
-	}
-#MIT-logo:hover {
-	background-image: url(../images/MIT-logo-sprite-54x28.gif);
-	background-repeat: no-repeat;
-	background-position: -280px 0px;
-	}	
-
-/* basic text formats */
-
-p {
-	margin-top: 0;	
-	margin-bottom: 12px;
-	}
-
-.call-to-action {
-	float:left;
-	font-size:1.2em;
-	line-height:1.6em;
-	color: #9e2e74;
-
-	
-	}
-
-.news-text {
-	font-size: .9em;
-	line-height: 1.2em;
-	}
-
-.small-text {
-	font-size: .8em;
-	}
-
-#contentbox {
-	float: left;
-	height: auto;
-	padding: 0%;
-	padding-right: 1%;
-	margin-right: 4%;
-	z-index: 12;
-
-	}
-
-.blurb {
-	float: left;
-	height: auto;
-	font-size:.9em;
-	padding: 2%;
-	padding-left: 3%;
-	padding-bottom:1%;
-	width: 80%;
-	margin-bottom:3%;
-	background-color:#ede8e2;
-	
-
-	}
-
-.idea-bank {
-	float: left;
-	height: auto;
-	padding: 3%;
-	padding-left: 4%;
-	padding-bottom:1%;
-	width: 95%;
-	margin-bottom:5%;
-	background-color:#ede8e2;
-	
-	}
-
-.focus-area {
-	float: left;
-	height: auto;
-	padding: 2%;
-	width: 44%;
-	margin-bottom: 1vw;
-	background-color:#eaeaea;
-		border-radius: 4px 4px 4px 4px;  /* for Chrome */
-	}
-
-.margin-right {
-	margin-right: 2%;
-	
-	}
-	
-.callout {
-	font-size: 1.1em;
-	line-height:1.3em;
-	margin-top: 0;
-	}
-	
-.red {
-	color:#903;
-	font-weight:bold;
-	}
-	
-.silo {
-	float: left;
-	width: 29%;
-	height: auto;
-	padding: 1%;
-	margin-right: 1.5%;
-	margin-bottom: 4%;
-	margin-top: -1%;
-	padding-top: 1%;
-			-moz-box-shadow: 5px 5px 5px #666;
-		-webkit-box-shadow: 5px 5px 5px #666;
-		box-shadow: 5px 5px 5px #666;
-		border: 1px solid #CCC;  /* for Chrome */
-	}
-	
-#sliderbox {
-	float: left;
-	width: 103%;
-	max-height:324px;
-	padding-top: 1%;
-	padding: 1%;
-	margin-top: 1%;
-	margin-left: 1%;
-	margin-right: 0;
-	margin-bottom:-5%;
-	}
-	
-#contentbox ul {
-	padding-left: 12px;
-	margin-top: 1%;
-	font-size:.94em;
-	margin-left: .4em;
-	}
-
-#contentbox li {
-	margin-left: 0;
-	padding-left: 0;
-	margin-bottom: 1%;
-	list-style:none;
-}
-#contentbox li:before {
-  /* For a round bullet */
-  content: '\2022';
-  /* For a square bullet */
-  /*content:'\25A0';*/
-  display: block;
-  position: relative;
-  max-width: 0;
-  max-height: 0;
-  left: -14px;
-  top: 0;
-  color: #538ac5;
-  font-size: 2em;
-}
-		
-.width20 {
-	width: 20%;
-	}
-
-.width30 {
-	width: 30%;
-	}
-
-.width36 {
-	width: 36%;
-	}		
-
-.width40 {
-	width: 40%;
-	}
-
-.width50 {
-	width: 50%;
-	}
-
-.width54 {
-	width: 54%;
-	}
-
-.width56 {
-	width: 58%;
-	}
-
-.width60 {
-	width: 60%;
-	}
-
-.width64 {
-	width: 64%;
-	}
-
-.width70 {
-	width: 70%;
-	}
-	
-.width72 {
-	width: 72%;
-	}	
-
-.width80 {
-	width: 80%;
-	}
-	
-.width90 {
-	width: 90%;
-	}
-
-.top {
-	margin-top: 18px;
-	}
-
-.rule {
-	float:left;
-	position:relative;
-	width: 100%;
-	height: 6px;
-	border-bottom: 1px solid #9f9b96;
-	margin-bottom: 3%
-	}
-
-.purple-rule {
-	float:left;
-	position:relative;
-	width: 100%;
-	height: 2px;
-	border-bottom: 1px solid #9e2e74;
-	margin-bottom: 12px;
-	}
-
-.gray-rule {
-	float:left;
-	position:relative;
-	width: 100%;
-	height: 6px;
-	border-bottom: 1px solid #CCC;
-	margin-bottom: 1%;
-	}	
-	
-.mobile-show {
-	display: none;
-	}
-
-.newsthumb {
-	margin-right: 5%;
-	margin-top: 0;
-	margin-bottom: 5%;
-	}
-	
-
-.video {
-	width: 100%;
-	height: 160px;
-	margin-bottom: 4%;
-	margin-top: 4%;
-	}
-
-	
-
-.indented-text {
-	margin-left: 5%;
-	margin-right: 3%;
-	margin-top: 0;
-	}
-
-	
-.button {
-	width: auto;
-	float:left;
-	margin-right: 1%;
-	}
-	
-#twitterfeed {
-	float: left;
-	width: 100%;
-	height: auto;
-	color: #666666;
-	}
-
-#newsfeed {
-	float: left;
-	width: 100%;
-	height: auto;
-	margin: 0px;
-	margin-right: 0;
-    color: #666666;
-	}	
-		
-#eventsfeed {
-	float: left;
-	width: 100%;
-	height: auto;
-	padding-top: 2%;
-	padding-right: 2%;
-	padding-left: 2%;
-	margin: 0px;
-    color: #666666;
-
-	
-	}		
-		
-#siderail {
-	float: left;
-	height: auto;
-	margin: 0px;
-	font-size:.94em;
-	line-height:1.3em;
-	padding-top: 6%;
-	padding-bottom: 0;
-	}	
-	
-#home-page-siderail {
-	float: left;
-	height: auto;
-	margin: 0px;
-	font-size:.94em;
-	line-height:1.3em;
-	padding-top: 1.4vw;
-	padding-bottom: 0;
-	}	
-	
-.spacer {
-	float: left;
-	width: 100%;
-	height: 1vw;
-	}
-	
-.floatright {
-	float: right;
-	margin-top: 2%;
-	}
-	
-.float-clear {
-	float: clear;
-	}
-
-	
-.floatleft {
-	float: left;
-	margin-right: 2%;
-	}
-	
-.photo-right {
-	float: right;
-	margin: 1%;
-	margin-left: 4%;
-	border: 1px solid #CCC;
-			border-radius: 4px 4px 4px 4px;  /* for Chrome */
-	}		
-	
-.photo {
-	float:left;
-	width: 40%;
-	height: auto;
-	margin-right: 3%;
-	margin-left: 0;
-	border-radius: 4px 4px 4px 4px;  /* for Chrome */
-	}
-
-.photo-right {
-	float:right;
-	width: 40%;
-	height: auto;
-	margin-left: 3%;
-	margin-right: 0;
-	border-radius: 4px 4px 4px 4px;  /* for Chrome */
-	}
-	
-#footer {
-	float: left;
-	width: 100%;
-	margin-top: 1.4%;
-	margin-bottom: 2%;
-	padding-top: 1.4%;
-	padding-bottom: 0;
-	border-top: 1px solid #9f9b96;
-	}
-	
-#footerlogo {
-	float: left;
-	width: 56px;
-	height: 30px;
-	background-image: url(../images/MIT-logo-sprite-54x28.gif);
-	background-repeat: no-repeat;
-	background-position: -168px 0px;
-	margin-top:0;
-	margin-right: 2%;	
-	}
-#footerlogo:hover {
-	background-image: url(../images/MIT-logo-sprite-54x28.gif);
-	background-repeat: no-repeat;
-	background-position: -56px 0px;
-	}
-	
-.footertext {
-	float: left;
-	margin-left: 0;
-	margin-top: -1px;
-	margin-right: 4%;
-	}	
-
-
-#socialmediawidget {
-	float: right;
-	margin-top: 1%;
-	margin-bottom: 2%;
-	margin-right: 4px;
-	}
-.pdf-icon {
-	margin-bottom: -12px;	
-	}
-
-.columns {
-	-moz-column-count: 2;
-	-moz-column-gap: 30px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 30px;
-	column-count: 2;
-	column-gap: 30px;
-	margin: 0;
-	padding-right: 2%;
-	}
-
-.head-shot-holder {
-	float:left;
-	position:relative;
-	width: 100%;
-	font-size:.96em;
-	line-height:1.4em;
-	height: 124px;
-	padding-top: 2.2%;
-	padding-bottom: 3%;
-	padding-right: 2%;
-	margin-bottom: 5%;
-	border-bottom:solid 1px #538ac5;
-	}
-.head-shot {
-	float:left;
-	width: 120px;
-	height: 120px;
-	border: 1px solid #CCC;
-	margin-right: 4%;
-	}
-
-#idea-bank-form {
-	float:left;
-	width: 100%;
-	height: auto;
-	font-size:.86em;
-	margin-top: 0;
-	}
-	
-.idea-bank-items {
-	float:left;
-	width: 100%;
-	border-bottom: 1px solid #9f9b96;
-	padding-bottom: 2%;
-	}	
-
-.idea-bank-entry-left {
-	float:left;
-	width: 100%;
-	margin-top: 0;
-	padding-top: 1%;
-	padding-right: 1%;
-	padding-bottom: 1%;
-	}	
-
-.idea-bank-entry-right {
-	float:left;
-	width: 60%;
-	margin-top: 0;
-	padding-top: 0;
-	padding-right: 0;
-	padding-bottom: 2%;
-	}
-
-
-@media screen and (max-width: 840px) {
-	
-.mobile-show {
-	display: block;
-	}
-
-	
-#searchbox {
-	padding-top: 1%;
-	padding-bottom: 4%;
-}
-
-.photobox {
-	width: 20%;
-}
-
-#sliderbox {
-	max-height: 512px;
-	
-}
-
-.video {
-	width: 66%;
-	height: 224px;
-	margin-bottom: 4%;
-	}
-	
-.width20,
-.width30,
-.width40,
-.width50,
-.width54,
-.width56,
-.width60,
-.width70,
-.width72,
-.width80 {
-	width: 94%;
-	}	
-
-#siderail {
-	border-top: 1px solid #5d3e0d;
-	padding-top: 3%;
-	}	
-
-}
-
-@media screen and (max-width: 640px) {
-
-.focus-area {
-	float: left;
-	height: auto;
-	padding: 1vw;
-	width: 96%;
-	margin-right: 0;
-	margin-bottom: 2vw;
-		}
-
-#subtitle {
-	margin-bottom: 2%;
-}
-
-
-#logo-holder {
-	margin-top: 2%;
-	margin-left: 6%;
-	margin-right: 2%;
-	}
-
-#searchbox {
-	float: left;
-	margin-top: 2%;
-	margin-bottom: 1%;
-}
-
-#sliderbox {
-	float: left;
-	width: 100%;
-	margin-left: 0;
-	
-}
-
-#newsfeed {
-	float: left;
-	width: 100%;
-	margin-top: 4%;
-}
-
-.video {
-	width: 76%;
-	height: 224px;
-	margin-bottom: 4%;
-	}
-
-.photobox {
-	width: 26%;
-	margin-right: 3%;
-}
-
-.silo {
-	float: left;
-	width: 98%;
-	margin-bottom: 4%;
-}
-
-.columns {
-	       -moz-column-count: 1;
-       -webkit-column-count: 1;
-	}
-
-.idea-bank-entry-left {
-	width: 100%;
-	}	
-
-
-}
-
-@media screen and (max-width: 460px) {
-
-
-#container { 
-		padding-left: 5%;
-}
-
-p {
-	font-size: 1.14em;
-	line-height:1.4em;
-	}
-
-
-
-#libraries-logo {
-	float: left;
-	width: 120px;
-	height: 27px;
-	background-image: url(../images/libraries_logo-mobile.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	background-size: 80% 80%;
-	margin-left: 4%;
-	margin-bottom:4%;
-	margin-top: 2%;
-	}
-
-
-
-#footer {
-	float: left;
-	margin-top: 4%;
-	padding-top: 4%;
-	margin-bottom: 4%;
-	}
-
-#footerlogo {
-	margin-left: 2%;
-	margin-top: 1%;
-	margin-bottom:4%;
-	margin-right: 3%;	
-	}
-
-	
-.footertext {
-	font-size: .9em;
-	line-height: 1.25em;
-	margin-bottom: 2%;
-	}
-		
-.margin-left2 {
-	margin-left: 2%;
-	}
-	
-
-#sliderbox {
-	float: left;
-	width: 100%;
-	margin-left: 2%;
-	
-}
-	
-#title {
-	margin-right: 0;
-	}	
-
-
-
+/* This stabilizes the html so pages don't jump around when navigating through the site   */
+html {
+  min-height: 100%;
+  margin-bottom: 1px;
+}
+
+body {
+  margin-top: 0px;
+  margin-right: 2%;
+  margin-left: 2%;
+  overflow-y: auto;
+}
+
+#container { /* The container is the live area that holds all the pages elements */
+  z-index: 2;
+  margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+  max-width: 1060px;
+  min-width: 280px;
+  padding: 2%;
+  padding-bottom: 1%;
+  padding-top: 0;
+  padding-left: 3%;
+  overflow: hidden;
+  border: 2px solid #9f9b96;
+}
+
+#logo-bar {
+  width: 103%;
+  float: left;
+  height: auto;
+  background: #333333;
+  padding: 2%;
+  padding-right: 4%;
+  margin-left: -5.4%;
+  padding-top: 2%;
+  padding-bottom: 0;
+  margin-bottom: 1.6%;
+}
+
+#libraries-logo {
+  float: left;
+  width: 120px;
+  height: 50px;
+  background-image: url(../images/libraries_logo.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 80% 80%;
+  margin-left: 4%;
+  margin-bottom: 1%;
+  margin-top: -1%;
+}
+
+#header { /* holds all the header elements: */
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  background-color: #538ac5;
+  padding: 6%;
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: -6%;
+  margin-bottom: -6%;
+  padding-bottom: 5%;
+}
+
+/* header group at upper left */
+
+#title { /* holds the org name and subtitle */
+  float: left;
+  width: auto;
+  height: auto;
+  margin-right: 4%;
+}
+
+#org-name a {
+  display: block;
+  width: auto;
+  height: auto;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+#org-name a:hover {
+  text-decoration: none;
+}
+
+#subtitle {
+  float: left;
+  width: auto;
+}
+
+#searchbox {
+  float: right;
+  width: auto;
+  height: auto;
+  z-index: 16;
+  padding: 0px;
+  margin-top: 6px;
+  margin-right: 2%;
+}
+
+/* MIT master logo at upper right */
+#logo-holder {
+  float: right;
+  width: 56px;
+  height: 30px;
+  margin-top: 0;
+  margin-left: 6%;
+  margin-right: 1%;
+}
+
+#MIT-logo {
+  width: 56px;
+  height: 30px;
+  float: left;
+  background-image: url(../images/MIT-logo-sprite-54x28.gif);
+  background-repeat: no-repeat;
+  background-position: -224px 0px;
+}
+
+#MIT-logo:hover {
+  background-image: url(../images/MIT-logo-sprite-54x28.gif);
+  background-repeat: no-repeat;
+  background-position: -280px 0px;
+}
+
+/* basic text formats */
+
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.call-to-action {
+  float: left;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: #9e2e74;
+}
+
+.news-text {
+  font-size: .9em;
+  line-height: 1.2em;
+}
+
+.small-text {
+  font-size: .8em;
+}
+
+#contentbox {
+  float: left;
+  height: auto;
+  padding: 0%;
+  padding-right: 1%;
+  margin-right: 4%;
+  z-index: 12;
+}
+
+.blurb {
+  float: left;
+  height: auto;
+  font-size: .9em;
+  padding: 2%;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  width: 80%;
+  margin-bottom: 3%;
+  background-color: #ede8e2;
+}
+
+.idea-bank {
+  float: left;
+  height: auto;
+  padding: 3%;
+  padding-left: 4%;
+  padding-bottom: 1%;
+  width: 95%;
+  margin-bottom: 5%;
+  background-color: #ede8e2;
+}
+
+.focus-area {
+  float: left;
+  height: auto;
+  padding: 2%;
+  width: 44%;
+  margin-bottom: 1vw;
+  background-color: #eaeaea;
+  border-radius: 4px 4px 4px 4px;  /* for Chrome */
+}
+
+.margin-right {
+  margin-right: 2%;
+}
+
+.callout {
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+
+.red {
+  color: #903;
+  font-weight: bold;
+}
+
+.silo {
+  float: left;
+  width: 29%;
+  height: auto;
+  padding: 1%;
+  margin-right: 1.5%;
+  margin-bottom: 4%;
+  margin-top: -1%;
+  padding-top: 1%;
+  -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666;
+  box-shadow: 5px 5px 5px #666;
+  border: 1px solid #ccc;  /* for Chrome */
+}
+
+#sliderbox {
+  float: left;
+  width: 103%;
+  max-height: 324px;
+  padding-top: 1%;
+  padding: 1%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 0;
+  margin-bottom: -5%;
+}
+
+#contentbox ul {
+  padding-left: 12px;
+  margin-top: 1%;
+  font-size: .94em;
+  margin-left: .4em;
+}
+
+#contentbox li {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 1%;
+  list-style: none;
+}
+
+#contentbox li:before {
+  /* For a round bullet */
+  content: '\2022';
+  /* For a square bullet */
+  /*content:'\25A0';*/
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -14px;
+  top: 0;
+  color: #538ac5;
+  font-size: 2em;
+}
+
+.width20 {
+  width: 20%;
+}
+
+.width30 {
+  width: 30%;
+}
+
+.width36 {
+  width: 36%;
+}
+
+.width40 {
+  width: 40%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width54 {
+  width: 54%;
+}
+
+.width56 {
+  width: 58%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.width64 {
+  width: 64%;
+}
+
+.width70 {
+  width: 70%;
+}
+
+.width72 {
+  width: 72%;
+}
+
+.width80 {
+  width: 80%;
+}
+
+.width90 {
+  width: 90%;
+}
+
+.top {
+  margin-top: 18px;
+}
+
+.rule {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-bottom: 1px solid #9f9b96;
+  margin-bottom: 3%;
+}
+
+.purple-rule {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid #9e2e74;
+  margin-bottom: 12px;
+}
+
+.gray-rule {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1%;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.newsthumb {
+  margin-right: 5%;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+.video {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 4%;
+  margin-top: 4%;
+}
+
+.indented-text {
+  margin-left: 5%;
+  margin-right: 3%;
+  margin-top: 0;
+}
+
+.button {
+  width: auto;
+  float: left;
+  margin-right: 1%;
+}
+
+#twitterfeed {
+  float: left;
+  width: 100%;
+  height: auto;
+  color: #666666;
+}
+
+#newsfeed {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-right: 0;
+  color: #666666;
+}
+
+#eventsfeed {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  margin: 0px;
+  color: #666666;
+}
+
+#siderail {
+  float: left;
+  height: auto;
+  margin: 0px;
+  font-size: .94em;
+  line-height: 1.3em;
+  padding-top: 6%;
+  padding-bottom: 0;
+}
+
+#home-page-siderail {
+  float: left;
+  height: auto;
+  margin: 0px;
+  font-size: .94em;
+  line-height: 1.3em;
+  padding-top: 1.4vw;
+  padding-bottom: 0;
+}
+
+.spacer {
+  float: left;
+  width: 100%;
+  height: 1vw;
+}
+
+.floatright {
+  float: right;
+  margin-top: 2%;
+}
+
+.float-clear {
+  float: clear;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 2%;
+}
+
+.photo-right {
+  float: right;
+  margin: 1%;
+  margin-left: 4%;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 4px 4px;  /* for Chrome */
+}
+
+.photo {
+  float: left;
+  width: 40%;
+  height: auto;
+  margin-right: 3%;
+  margin-left: 0;
+  border-radius: 4px 4px 4px 4px;  /* for Chrome */
+}
+
+.photo-right {
+  float: right;
+  width: 40%;
+  height: auto;
+  margin-left: 3%;
+  margin-right: 0;
+  border-radius: 4px 4px 4px 4px;  /* for Chrome */
+}
+
+#footer {
+  float: left;
+  width: 100%;
+  margin-top: 1.4%;
+  margin-bottom: 2%;
+  padding-top: 1.4%;
+  padding-bottom: 0;
+  border-top: 1px solid #9f9b96;
+}
+
+#footerlogo {
+  float: left;
+  width: 56px;
+  height: 30px;
+  background-image: url(../images/MIT-logo-sprite-54x28.gif);
+  background-repeat: no-repeat;
+  background-position: -168px 0px;
+  margin-top: 0;
+  margin-right: 2%;
+}
+
+#footerlogo:hover {
+  background-image: url(../images/MIT-logo-sprite-54x28.gif);
+  background-repeat: no-repeat;
+  background-position: -56px 0px;
+}
+
+.footertext {
+  float: left;
+  margin-left: 0;
+  margin-top: -1px;
+  margin-right: 4%;
+}
+
+#socialmediawidget {
+  float: right;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-right: 4px;
+}
+
+.pdf-icon {
+  margin-bottom: -12px;
+}
+
+.columns {
+  -moz-column-count: 2;
+  -moz-column-gap: 30px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 30px;
+  column-count: 2;
+  column-gap: 30px;
+  margin: 0;
+  padding-right: 2%;
+}
+
+.head-shot-holder {
+  float: left;
+  position: relative;
+  width: 100%;
+  font-size: .96em;
+  line-height: 1.4em;
+  height: 124px;
+  padding-top: 2.2%;
+  padding-bottom: 3%;
+  padding-right: 2%;
+  margin-bottom: 5%;
+  border-bottom: solid 1px #538ac5;
+}
+
+.head-shot {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ccc;
+  margin-right: 4%;
+}
+
+#idea-bank-form {
+  float: left;
+  width: 100%;
+  height: auto;
+  font-size: .86em;
+  margin-top: 0;
+}
+
+.idea-bank-items {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #9f9b96;
+  padding-bottom: 2%;
+}
+
+.idea-bank-entry-left {
+  float: left;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+.idea-bank-entry-right {
+  float: left;
+  width: 60%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 840px) {
+
+  .mobile-show {
+    display: block;
+  }
+
+  #searchbox {
+    padding-top: 1%;
+    padding-bottom: 4%;
+  }
+
+  .photobox {
+    width: 20%;
+  }
+
+  #sliderbox {
+    max-height: 512px;
+  }
+
+  .video {
+    width: 66%;
+    height: 224px;
+    margin-bottom: 4%;
+  }
+
+  .width20,
+  .width30,
+  .width40,
+  .width50,
+  .width54,
+  .width56,
+  .width60,
+  .width70,
+  .width72,
+  .width80 {
+    width: 94%;
+  }
+
+  #siderail {
+    border-top: 1px solid #5d3e0d;
+    padding-top: 3%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .focus-area {
+    float: left;
+    height: auto;
+    padding: 1vw;
+    width: 96%;
+    margin-right: 0;
+    margin-bottom: 2vw;
+  }
+
+  #subtitle {
+    margin-bottom: 2%;
+  }
+
+
+  #logo-holder {
+    margin-top: 2%;
+    margin-left: 6%;
+    margin-right: 2%;
+  }
+
+  #searchbox {
+    float: left;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+
+  #sliderbox {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #newsfeed {
+    float: left;
+    width: 100%;
+    margin-top: 4%;
+  }
+
+  .video {
+    width: 76%;
+    height: 224px;
+    margin-bottom: 4%;
+  }
+
+  .photobox {
+    width: 26%;
+    margin-right: 3%;
+  }
+
+  .silo {
+    float: left;
+    width: 98%;
+    margin-bottom: 4%;
+  }
+
+  .columns {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+  }
+
+  .idea-bank-entry-left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #container {
+    padding-left: 5%;
+  }
+
+  p {
+    font-size: 1.14em;
+    line-height: 1.4em;
+  }
+
+  #libraries-logo {
+    float: left;
+    width: 120px;
+    height: 27px;
+    background-image: url(../images/libraries_logo-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 80% 80%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+  }
+
+  #footer {
+    float: left;
+    margin-top: 4%;
+    padding-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  #footerlogo {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-right: 3%;
+  }
+
+  .footertext {
+    font-size: .9em;
+    line-height: 1.25em;
+    margin-bottom: 2%;
+  }
+  .margin-left2 {
+    margin-left: 2%;
+  }
+
+  #sliderbox {
+    float: left;
+    width: 100%;
+    margin-left: 2%;
+  }
+
+  #title {
+    margin-right: 0;
+  }
 }
