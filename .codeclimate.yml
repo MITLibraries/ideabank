@@ -26,6 +26,11 @@ engines:
       standard: "Drupal"
   phpmd:
     enabled: true
+    checks:
+      Controversial/CamelCaseParameterName:
+        enabled: false
+      UnusedFormalParameter:
+        enabled: false
 ratings:
   paths:
   - "**.css"
