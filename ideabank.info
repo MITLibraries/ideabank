@@ -18,6 +18,7 @@ features[] = secondary_menu
 ;theme settings
 settings[background_image] = 1
 settings[libraries_logo] = 1
+settings[search_header] = 1
 
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/nav.css
