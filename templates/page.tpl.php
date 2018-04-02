@@ -113,27 +113,11 @@
 <?php print render($page['header']); ?>
 
 <div id="searchbox"> <!--MIT-Google search open -->
-    <?php /*
-	<form method="get" action="http://search.mit.edu/search">
-	   <input type="text" name="q" size="20" maxlength="255" value=""/>
-	   <input type="submit" name="btnG" value=" Search the site"/>
-	   <input type="hidden" name="site" value="mit"/>
-	   <input type="hidden" name="client" value="mit"/>
-	   <input type="hidden" name="proxystylesheet" value="mit"/>
-	   <input type="hidden" name="output" value="xml_no_dtd"/>
-	   <input type="hidden" name="ie" value="UTF-8"/>
-	   <input type="hidden" name="as_dt" value="i"/>
-	    <input type="hidden" name="as_sitesearch" value="future-of-libraries.mit.edu"/>
-	</form>
-    */ ?>
     <?php
-    //$block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
-    //print render($block['content']);
     $block = block_load('google_appliance','ga_block_search_form');
     $output = _block_get_renderable_array(_block_render_blocks(array($block)));
     print drupal_render($output);
     ?>
-
 </div><!-- MIT-Google search close -->
 
 
