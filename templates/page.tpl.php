@@ -112,13 +112,16 @@
 
 <?php print render($page['header']); ?>
 
-<div id="searchbox"> <!--MIT-Google search open -->
-    <?php
-    $block = block_load('google_appliance','ga_block_search_form');
-    $output = _block_get_renderable_array(_block_render_blocks(array($block)));
-    print drupal_render($output);
-    ?>
-</div><!-- MIT-Google search close -->
+<?php if (theme_get_setting('search_header')): ?>
+    <div id="searchbox"> <!--MIT-Google search open -->
+        <?php
+        $block = block_load('google_appliance','ga_block_search_form');
+        $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+        print drupal_render($output);
+        ?>
+    </div><!-- MIT-Google search close -->
+<?php endif; ?>
+
 
 
 </div> <!-- header close -->

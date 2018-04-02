@@ -28,4 +28,11 @@ function ideabank_form_system_theme_settings_alter(&$form, $form_state) {
     '#description'   => t("Should the MIT Libraries' logo be displayed at the top of the site?"),
   );
 
+  $form['search_header'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Show search in header'),
+    '#default_value' => theme_get_setting('search_header'),
+    '#description'   => t("Should the Google CSE search form be displayed in the site header?"),
+  );
+
 }
