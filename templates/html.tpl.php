@@ -14,6 +14,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="shortcut icon" href="<?php print theme_get_setting('favicon'); ?>" type="image/vnd.microsoft.icon" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <?php print $styles; ?>
         <?php print $scripts; ?>
