@@ -503,6 +503,22 @@ p {
   margin-right: 4%;
 }
 
+#footer .policies {
+  float: right;
+}
+
+#footer .policies .item {
+  display: inline-block;
+}
+
+#footer .policies .item:after {
+  content: ' | ';
+}
+
+#footer .policies .item:last-child:after {
+  content: '';
+}
+
 #socialmediawidget {
   float: right;
   margin-top: 1%;
