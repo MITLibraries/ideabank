@@ -211,15 +211,17 @@
 <?php endif; ?>
 
 <div id="footer"  class="clearfix">
-
-
-
-<a href="http://web.mit.edu"><div id="footerlogo"></div></a>
-
-<div class="footertext"><?php print $site_name; ?><br />
-Massachusetts Institute of Technology<br />
-Cambridge MA 02139-4307
-</div>
+    <a href="http://web.mit.edu"><div id="footerlogo"></div></a>
+    <div class="footertext"><?php print $site_name; ?><br />
+        Massachusetts Institute of Technology<br />
+        Cambridge MA 02139-4307
+    </div>
+    <div class="policies">
+        <nav aria-label="MIT Libraries policy menu">
+            <span class="item"><a href="https://libraries.mit.edu/accessibility" class="link-sub">Accessibility</a></span>
+            <span class="item"><a href="https://libraries.mit.edu/privacy" class="link-sub">Privacy</a></span>
+        </nav>
+    </div>
 
 </div>
 
